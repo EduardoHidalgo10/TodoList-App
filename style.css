@@ -1,0 +1,130 @@
+:root {
+    --font-color: #ffffff;
+    --body-bg-color: white;
+    --container-bg-color: #5668bb;
+    --todo-bg-color: #303350;
+    --done-bg-color: #33f51a;
+    --svg-normal-color: #f3f3f3;
+    --svg-hover-color: #303350;
+    --svg-hover-color-complete: rgb(5, 126, 5);
+    --svg-complete-color: #14a806;
+    --svg-remove-color: #d63031;
+    --svg-remove-hover-color: #ff4757;
+}
+
+* {
+    font-family: 'Roboto Slab', serif;
+    padding: 0;
+    margin: 0;
+    color: var(--font-color);
+}
+
+body {
+    background-color: var(--body-bg-color);
+    display: flex;
+    justify-content: center;
+}
+
+#container {
+    background-color: var(--container-bg-color);
+    padding: 2%;
+    min-height: 30vh;
+    min-width: 30vw;
+    width: auto;
+    height: auto;
+    margin-top: 10vh;
+    border-radius: 5%;
+}
+
+h2 {
+    margin-bottom: 40px;
+    margin-top: 40px;
+    display: inline-block;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header input {
+    color: black;
+    min-height: 40px;
+    width: 100%;
+    border-radius: 3%;
+    padding-left: 5%;
+    background-color: var(--body-bg-color);
+}
+
+header button {
+    min-width: 40px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    padding-left: 5px;
+}
+
+li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+li .buttons {
+    min-width: 100px;
+    margin-left: auto;
+    display: inline;
+}
+
+li .buttons button {
+    background: none;
+    min-width: 40px;
+    border: none;
+    font-size: 2rem;
+}
+
+.completed li {
+    background-color: var(--done-bg-color);
+}
+
+.completed .complete svg path {
+    fill: var(--svg-complete-color);
+}
+
+svg {
+    max-width: 25px;
+}
+
+.complete svg path {
+    fill: var(--svg-complete-color);
+}
+
+.complete:hover svg path {
+    fill: var(--svg-hover-color-complete);
+}
+
+svg path {
+    fill: var(--svg-normal-color);
+}
+
+button:hover svg path {
+    fill: var(--svg-hover-color);
+}
+
+.remove svg path {
+    fill: var(--svg-remove-color);
+}
+
+.remove:hover svg path {
+    fill: var(--svg-remove-hover-color);
+}
